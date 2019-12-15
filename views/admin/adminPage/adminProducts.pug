@@ -14,7 +14,7 @@ block content
             button.btn.btn-primary(type='submit') SEARCH
         br 
         form#idDelete(action="/admin/products/delete", method="POST" class="form-inline")
-          input(type="text" name = "idDelete" class="form-control" placeholder='Nhap vao id product can xoa...')
+          input(type="text" name = "idDelete" class="form-control" placeholder='Nhập vào id sản phẩm cần xóa...')
           span &nbsp;
           button.btn.btn-danger Delete
         br 
@@ -27,7 +27,7 @@ block content
               th Price
               th Category
               th Supplier
-              //th Description
+              th Description
               th Action
           tbody
             each product in products
@@ -42,7 +42,7 @@ block content
                 else if product.category===2 
                   td Men pants
                 td= product.supplier
-                //td= product.description
+                td= product.description
                 td
                   a.btn.btn-warning(href='/admin/products/'+product.id) Edit
         br 
