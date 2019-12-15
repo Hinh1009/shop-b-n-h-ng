@@ -35,30 +35,30 @@ CREATE TABLE products (
 );
 
 ALTER TABLE "products" OWNER TO myuser;
-
 INSERT INTO products(name, price, img, description, category, supplier)
-VALUES('digital camera',300, 'themes/images/products/1.jpg','day chi la mo ta demo thoi',1,'USA')
-
+VALUES('quần kaki công sở màu sữa ',480, 'themes/images/products/quần kaki công sở màu sữa.jpg','màu sữa',2,'No Brand');
 INSERT INTO products(name, price, img, description, category, supplier)
-VALUES('Red digital camera',300, 'themes/images/products/2.jpg','day chi la mo ta demo thoi',1,'SONY')
-
+VALUES('quần kaki dài nam co dãn',350, 'themes/images/products/quần kaki dài nam co dãn.jpg','màu xám',2,'MAY');
 INSERT INTO products(name, price, img, description, category, supplier)
-VALUES('Big digital camera',350, 'themes/images/products/4.jpg','hahahahahahaha',2,'Made in VietNam')
-
+VALUES('quần kaki dài trung niên',380, 'themes/images/products/quần kaki dài trung niên.jpg','màu xám',2,'KOREA');
 INSERT INTO products(name, price, img, description, category, supplier)
-VALUES('SD card',150, 'themes/images/products/6.jpg','helehehehehe',2,'VDN')
-
+VALUES('áo giữ nhiệt nam chất thun',300, 'themes/images/products/áo giữ nhiệt nam chất thun.jpg','màu đen',1,'vua thời trang');
 INSERT INTO products(name, price, img, description, category, supplier)
-VALUES('USB',220, 'themes/images/products/7.jpg','ppppppppppp',1,'China')
-
+VALUES('áo hoodie không mũ Hàn Quốc',325, 'themes/images/products/áo hoodi không mũ hàn quốc.jpg','màu nâu',1,'No Brand');
 INSERT INTO products(name, price, img, description, category, supplier)
-VALUES('boot',170, 'themes/images/products/b1.jpg','lalalalalalal',2,'Adidas')
-
+VALUES('áo hoodie nam AlanWaker',475, 'themes/images/products/áo hoodie nam AlanWaker.jpg','màu đen',1,'No Brand');
 INSERT INTO products(name, price, img, description, category, supplier)
-VALUES('panasonic camera',750, 'themes/images/products/13.jpg','Made in Japan || Design by Panasonic',1,'Panasonic')
-
+VALUES('áo hoodie nam hình pikachu',220, 'themes/images/products/áo hoodie nam hình pikachu.jpg','màu đen vàng',1,'BÒ SỮA');
 INSERT INTO products(name, price, img, description, category, supplier)
-VALUES('Ipad',840, 'themes/images/products/kindle.png','vnvnvnvnvnvnnvvn',2,'Kindle')
+VALUES('áo khoác dù nam cao cấp',450, 'themes/images/products/áo khoác dù nam cao cấp.jpg','nhiều màu, ghi chú chọn màu khi đặt hàng',1,'MAY');
+INSERT INTO products(name, price, img, description, category, supplier)
+VALUES('áo khoác dù thời trang nam cao cấp',320, 'themes/images/products/áo khoác dù thời trang nam cao cấp.jpg','màu đen',1,'MC');
+INSERT INTO products(name, price, img, description, category, supplier)
+VALUES('áo khoác jean nam trơn màu đen',400, 'themes/images/products/áo khoác jean nam trơn màu đen.jpg','màu đen',1,'MAY');
+INSERT INTO products(name, price, img, description, category, supplier)
+VALUES('áo len cổ lọ nam màu xám cao cấp',200, 'themes/images/products/áo len cổ lọ nam màu xám cao cấp.jpg','màu xám ',1,'MAY');
+
+
 
 DROP TABLE products 
 
@@ -77,26 +77,6 @@ CREATE TABLE carousels (
 drop table carousels;
 ALTER TABLE "carousels" OWNER TO myuser;
 
-INSERT INTO carousels(name,img)
-VALUES('anh 1','themes/images/carousel/1.png')
-
-INSERT INTO carousels(name, img)
-VALUES('carousels thu 2','themes/images/carousel/2.png')
-
-INSERT INTO carousels(name, img)
-VALUES('Cai 3','themes/images/carousel/3.png')
-
-INSERT INTO carousels(name, img)
-VALUES('Anh thu 4','themes/images/carousel/4.png')
-
-INSERT INTO carousels(name, img)
-VALUES('Cai thu 6','themes/images/carousel/5.png')
-
-INSERT INTO carousels(name, img)
-VALUES('Cai Anh thu 7 kakkaak','themes/images/carousel/6.png')
-
-INSERT INTO carousels(name, img)
-VALUES('Anh 3','assets/img/slider/3.jpg')
 
 CREATE TABLE cartsessions (
 	id serial PRIMARY KEY,
@@ -149,8 +129,6 @@ CREATE TABLE admin (
 	email text UNIQUE NOT NULL
 );
 ALTER TABLE "admin" OWNER TO myuser;
-INSERT INTO admin(hash, email)
-VALUES('"$2a$10$awhsUxT3SU.b7wBLT5DKQuh3o2LMti/g/rLNFeG2vC1nomsOxjXpW"','nguyenvd@gmail.com')
 
 CREATE TABLE orderdetail (
 	id serial PRIMARY KEY,
