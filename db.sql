@@ -1,11 +1,10 @@
-﻿﻿CREATE TABLE users (
+CREATE TABLE users (
 	id serial PRIMARY KEY,
 	name VARCHAR(100),
 	email text UNIQUE NOT NULL,
 	phone VARCHAR(100) NOT NULL,
 	joined TIMESTAMP NOT NULL
 );
-drop table users;
 ALTER TABLE "users" OWNER TO myuser;
 ALTER TABLE "users" OWNER TO postgres;
 
@@ -60,22 +59,13 @@ VALUES('áo len cổ lọ nam màu xám cao cấp',200, 'themes/images/products/
 
 
 
-DROP TABLE products 
-
---UPDATE products
---SET "img" = 'themes/images/products/kindle.png'
---WHERE "name"='Ipad'
---UPDATE products
---SET "img" = 'themes/images/products/13.jpg'
---WHERE "name"='panasonic camera'
 
 CREATE TABLE carousels (
 	id serial PRIMARY KEY,
 	name VARCHAR(100) NOT NULL,
 	img VARCHAR(100) NOT NULL
 );
-drop table carousels;
-ALTER TABLE "carousels" OWNER TO myuser;
+ALTER TABLE "carousels" OWNER TO postgres;
 
 
 CREATE TABLE cartsessions (
@@ -89,19 +79,16 @@ CREATE TABLE cartsessions (
 	quantity int
 );
 
-ALTER TABLE "cartsessions" OWNER TO myuser;
+ALTER TABLE "cartsessions" OWNER TO postgres;
 
 CREATE TABLE sessions (
 	id serial PRIMARY KEY,
 	sessionId VARCHAR(100)
 );
 
-ALTER TABLE "sessions" OWNER TO myuser;
+ALTER TABLE "sessions" OWNER TO postgres;
 
-DROP TABLE sessions;
 
-DELETE from cartsessions
-where description LIKE '%i%'
 
 CREATE TABLE orders (
 	id serial PRIMARY KEY,
@@ -115,20 +102,15 @@ CREATE TABLE orders (
 	totalprice INT,
 	status INT DEFAULT 0
 );
-ALTER TABLE "orders" OWNER TO myuser;
-drop table orders;
+ALTER TABLE "orders" OWNER TO postgres;
 
-DELETE from orders
-where email LIKE '%m%'
-DELETE from orders
-where totalprice = 3210
 
 CREATE TABLE admin (
 	id serial PRIMARY KEY,
 	hash varchar(100) NOT NULL,
 	email text UNIQUE NOT NULL
 );
-ALTER TABLE "admin" OWNER TO myuser;
+ALTER TABLE "admin" OWNER TO postgres;
 
 CREATE TABLE orderdetail (
 	id serial PRIMARY KEY,
@@ -141,5 +123,4 @@ CREATE TABLE orderdetail (
 	quantity int
 );
 
-ALTER TABLE "orderdetail" OWNER TO myuser;
-drop table orderdetail;
+ALTER TABLE "orderdetail" OWNER TO postgres;
