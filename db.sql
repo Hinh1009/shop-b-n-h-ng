@@ -5,7 +5,7 @@ CREATE TABLE users (
 	phone VARCHAR(100) NOT NULL,
 	joined TIMESTAMP NOT NULL
 );
-ALTER TABLE "users" OWNER TO myuser;
+//ALTER TABLE "users" OWNER TO myuser;
 ALTER TABLE "users" OWNER TO postgres;
 
 CREATE TABLE login (
@@ -66,7 +66,10 @@ CREATE TABLE carousels (
 	img VARCHAR(100) NOT NULL
 );
 ALTER TABLE "carousels" OWNER TO postgres;
-
+INSERT INTO carousels(name,img)
+VALUES('anh 1','themes/images/carousel/carousel1.jpg');
+INSERT INTO carousels(name,img)
+VALUES('anh 2','themes/images/carousel/carousel2.jpg');
 
 CREATE TABLE cartsessions (
 	id serial PRIMARY KEY,
